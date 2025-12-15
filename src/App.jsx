@@ -17,12 +17,6 @@ const App = () => {
 
       <NavBar />
       <Hero/>
-      {/* <button
-        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        className="fixed bottom-8 right-8 bg-blue-500 text-white p-4 rounded-full shadow-lg hover:bg-blue-600 transition-all z-50"
-        aria-label="Back to top"
-      > ↑
-      </button> */}
       <ProductViewer />
       <Showcase />
       <Performance />
