@@ -1,39 +1,15 @@
 import {navLinks} from "../constants";
 
 const NavBar = () => {
-    const handleNavClick = (label) => {
-        
-        const sectionIds = {
-            'Home': 'hero',
-            'ProductView': 'product-viewer',
-            'ShowCase': 'showcase',
-            'Performance': 'performance',
-            'features': 'features',
-            'HighLights': 'highlights'
-        };
-
-        const sectionId = sectionIds[label];
-        if (sectionId) {
-            const element = document.getElementById(sectionId);
-            if (element) {
-                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-        }
-    };
-
     return (
         <header>
             <nav>
-                <img src="/logo.svg" alt="Apple logo" />
+                <img  src="/logo.svg" alt="Apple logo" />
 
                 <ul>
                     {navLinks.map(({ label }) => (
-                        <li 
-                            key={label}
-                            onClick={() => handleNavClick(label)}
-                            className="cursor-pointer hover:text-gray-300 transition-colors"
-                        >
-                            {label}
+                        <li key={label}>
+                            <a href={label}>{label}</a>
                         </li>
                     ))}
                 </ul>
